@@ -1,10 +1,16 @@
-int[] colonne = new int[5];
+int[] colonne = new int[3];
+int[][] bankoPlade = new int[9][3];
 
 void setup() {
-  while(findEns(tilfaeldigeTal(colonne.length))){
-  colonne=tilfaeldigeTal(colonne.length);
-  }
+  
+  colonne = tilfaeldigeTal(colonne.length); //<>//
   colonne = sorter(colonne);
+  
+  while(findEns(colonne)){
+  colonne=tilfaeldigeTal(colonne.length);
+  colonne = sorter(colonne);
+
+}
   printArray(colonne);
 }
 
